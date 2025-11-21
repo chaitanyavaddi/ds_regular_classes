@@ -1,0 +1,124 @@
+Business Thinking + Understanding a dataset
+
+Definition data:
+
+Data is raw information collected from customers, 
+products, transactions, or any operations
+
+Examples:
+* Customer names
+* Sales amount
+* Product categories
+* Shipping dates
+* Location (city, state..)
+
+Definition Dataset:
+
+A dataset is a structured collection of data stored in 
+rows and columns usually in CSV / Excel format. 
+
+Examples:
+* Rows  = orders
+* Columns = Sales, profit, category, etc..
+Customer name	Sale amount	Sale date
+John	400	03-05-2025
+
+Definition: Business Problem
+
+A Challenge or a goal a company wants to solve using data
+
+Examples:
+* “Which products are not profitable?”
+* ‘Which city buys the most items?”
+* ‘Why is profit going down?”
+
+
+Definition: KPI (Key Performance Indicator)
+
+A measurable value that shows how well the business is performing
+
+Examples:
+* Revenue
+* Profit
+* Customer retention
+* Monthly sales
+* Average order value
+
+Now:
+
+Superstore dataset:
+
+This will contain all orders from customers across
+the country
+
+
+1. Download the dataset
+2. Understanding the dataset
+    1. Look into columns
+
+Column	Definition
+Order ID	Unique ID for each order
+Order Date	Date when customer placed an order
+Ship Date	Date when the order was shipped
+Ship Mode	How the product was shipped? 
+Customer ID	Unique ID of ordered customer
+Sales	Total selling price of the order
+Profit	Margin earned from the sale
+
+* You need to reach out to respective developer to get clarity on business intention behind the column (never assume)
+* 2. Types of Data in The Dataset
+Type	Examples	Defintion
+Numerical data	Sales, Quantity, Profit etc..	Numbers that can be measured
+Categorical Data	Ship Mode, City, category etc..	Labels or categories
+Data/Time Date	Order date, Ship date	Dates, timestamps
+Identifiers	Order ID etc..	Unique codes
+* 3. Load the dataset in Python
+* To do that, we will use Pandas
+* Definition Pandas: It is a python library used for reading, cleaning, and analyzing datasets
+* Dataframe is more like an excel sheet inside python
+* 4. Check Data Quality
+* Def: How accurate, consistent, complete, and clean the data is
+    * 1. Data Types - df.info()
+    * 2. Summary Statistics 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
