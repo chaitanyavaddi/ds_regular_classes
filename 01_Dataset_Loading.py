@@ -1,8 +1,6 @@
 import pandas as pd
 
 
-df = pd.read_csv("/Users/chaitanyavaddi/Documents/01_met/datascience/ds_regular_classes/datasets/Sample_ Superstore.csv")
-
 #1. Get 5 by 5 rows and columns within dataset
 # print(df.head())
 
@@ -26,3 +24,13 @@ df = pd.read_csv("/Users/chaitanyavaddi/Documents/01_met/datascience/ds_regular_
 # Choose a dataset from kaggle
 # Do priliminary analysis
 # Fund data quality issues
+
+
+# Data Cleaning?
+# Data Cleaning is the process of fixing errors, removing inconsistencies,
+# and preparing the dataset for analysis
+#Why?
+# Dirty data -> Wrong charts
+# Wrong charts -> Wrong decisions
+# Wrong decisions -> Company loses money
+
