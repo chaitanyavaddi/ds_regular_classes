@@ -2,6 +2,14 @@ import pandas as pd
 
 df = pd.read_csv("/Users/chaitanyavaddi/Documents/01_met/datascience/ds_regular_classes/datasets/Sample_ Superstore.csv")
 
+# Data Cleaning?
+# Data Cleaning is the process of fixing errors, removing inconsistencies,
+# and preparing the dataset for analysis
+#Why?
+# Dirty data -> Wrong charts
+# Wrong charts -> Wrong decisions
+# Wrong decisions -> Company loses money
+
 ###########################################
 #Step 1 - Remove duplicates Rows
 # Duplicate rows inflate sales and profit
