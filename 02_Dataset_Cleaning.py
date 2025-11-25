@@ -16,7 +16,7 @@ df = df.drop_duplicates()
 # format = 'mixed' -> tells pandas to handle them automatically
 # dayfirst = True -> ensures formatting automaticlaly with day first
 ## Ef. 12/03/2017 -> 12 March, Not Dec 03
-# errors = 'coerce' - invalid dates become NaT instead of breakign our code
+# errors = 'coerce' - invalid dates become NaT instead of breaking our code
 # # print(df)
 ## 1. Normlization
 df['Order Date'] = df['Order Date'].astype(str).str.replace('-','/')
@@ -81,8 +81,34 @@ df['Month'] = df['Order Date'].dt.month
 df['High Discount'] = df['Discount'].apply(lambda x: 1 if x > 0.3 else 0)
 ###########################################
 
+##A1 Advanced Data Cleaning
+
+#A1.Spelling Inconsistencies - method 1
+## ProblemL Same category written in diff ways
+## Technlogy - Technology
+## office supplies - Offlice Supplies
+## 'Furniture ' - Furniture
+# mapping = {
+#     'United Stetes': 'United States'
+# }
+# df['Country'] = df['Country'].replace(mapping)
+
+#A1.2 Spelling Inconsistencies - method 2
+# Fuzzy Matching
+# We have a python package called rapidfuzz
+from rapidfuzz import process
+
+def correct_spelling(x, choices):
+    match = process.extractOne(x, choices)
+    return match[0]
+
+allowed_countries = ['United States', 'Canada']
+# unique_countries = df['Country'].unique()
+df['Country'] = df['Country'].apply(lambda x: correct_spelling(x, allowed_countries))
+
+
 ###########################################
 #Step 7 -  Save Clean file
-df.to_csv("Cleaned_SuperStore.csv", index=False)
-print(df)
+# df.to_csv("Cleaned_SuperStore.csv", index=False)
+print(df['Country'])
 ###########################################
