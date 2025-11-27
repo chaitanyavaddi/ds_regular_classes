@@ -22,7 +22,7 @@ import pandas as pd
 
 #Assigment
 # Choose a dataset from kaggle
-# Do priliminary analysis
+# Do Basic EDA
 # Fund data quality issues
 
 

@@ -1,0 +1,15 @@
+Assignment:
+- Choose a Dataset
+- DatasetSet Cleaning
+- Dataset Overview
+- At least 12 charts
+- Insights in the 4 step format
+- Top/Bottom Analysis
+- Segment Analysis
+- Time series Analysis
+- Profitability Insights
+- Recommendations for CEO
+
+with presentation!
+
+- This is your first portfolio EDA project

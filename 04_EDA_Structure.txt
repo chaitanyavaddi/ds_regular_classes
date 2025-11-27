@@ -1,0 +1,15 @@
+How to write EDA Insights?
+
+- Observation    -> What you see in the chart?
+- Reason         -> Why this happened?
+- Impact         -> Why it matters?
+- Recommendation -> What CEO should do?
+
+
+Eg. 
+Observation: technology category is generating higest sales
+Reason: High ticket items like laptops, printers
+Impact: high revenue, stable profit
+Recommendation: Increase promotions in Technology category
+
+
