@@ -17,4 +17,3 @@ st.plotly_chart(get_discount_distribution(df))
 st.plotly_chart(get_profit_distribution(df))
 st.plotly_chart(get_sales_vs_profit(df))
 st.plotly_chart(get_sales_vs_state(df))
-
