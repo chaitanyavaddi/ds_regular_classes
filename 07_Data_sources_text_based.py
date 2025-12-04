@@ -47,7 +47,7 @@
 # - Columnar format - very fast, compressed, Optimized for big data
 # Pandas can read parquet file
 # import pandas as pd
-# df = pd.read_parquet('userdata.parquet')
+# df = pd.read_parquet('sample.parquet')
 # df.to_parquet('output.parquet') #to export
 # print(df.info())
 
