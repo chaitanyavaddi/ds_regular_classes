@@ -1,0 +1,154 @@
+What is ML?
+
+Machine Learning is teaching computers to learn patterns from data instead of
+giving them step by step instructions. 
+
+In traditional programming, we write rules. In ML, the computer learns rules
+from examples. 
+
+- You dont tell ML how to recognize a cat
+- You show 10,000 cat photos, ML learn patterns (shape, ears, eyes, texture)
+
+Why do we need ML?
+Because humands cannot manually create rules for 
+- Large datasets, Complex patterns, fast changing env
+
+Where? - Real Life Examples:
+- Netflix - movie recommendations (ML learns your behaviour & predict what you will watch next)
+- Google Maps - Travel time prediction (Ml learns from past trips to estimate ETA)
+- Banks - Fraud detection (ML flags unsual activity based on learned patterns)
+- Amazon - prouct recommendations (ML analyzes millions of user actions)
+- Uber - Surge pricing (ML predicts demand -> increase price automatically)
+- Instagram - Feed ranking (ML learns what content you like)
+- Hospitals - Disease prediction (ML predicts diabetes or heart issues from medical records)
+- Finance - credit scoring (ML predicts who is like to repay a loan)
+
+
+The Core Formula of ML:
+
+Input Data -> ML Algorithm -> Model -> Predictions
+
+Ex: data -> size, location, rooms; Model -> Lienar regression; prediction: House price
+
+
+Analogy:
+- Show many examples
+- The child finds patterns
+- The child tries new examples
+- If wrong -> correct and learn
+- After corrections -> becomes accurate
+
+ML works exactly the same but with math. 
+
+Maching Learning Terms:
+
+- Feature (Input variable)
+-- Information used for prediction
+-- Example (House price prediction).
+-- Size -> Feature
+-- Location -> Feature
+-- Number of rooms -> Feature
+
+- Label / Target
+-- What you want to predict?
+-- House price
+-- Disease risk
+-- Will customer buy?
+
+- Training Data
+-- Historical data with features + labels
+
+- Model 
+-- The brain the ML creates. 
+
+- Prediction
+-- The output of the model
+
+- Error / Loss
+-- How wrong the prediciton is?
+
+- Underfitting
+-- Model learns too little -> cannot capture patterns
+
+
+Machine Learning Types:
+1. Supervised Learning
+-- Model learns from labeled data. 
+-- Photos labeled cat or dog
+-- Fraud vs not Fraud
+-- Price prediction
+
+Eg. Teacher gives question -> also gives correct answer -> stduent learns
+-- Regression -> predicting numbers
+-- Classification -> predicting categories
+
+2. Unsupervised Learning
+-- Model learns patterns without labels
+-- group similar customers
+-- cluster similar songs
+-- Identify unusual behavior
+
+Eg. Students automatically group themselves based on interests -> no instructions are given
+-- clustering, dimensionality reduction (PCA)
+
+3. Reinforcement Learning
+-- Model learns by trail and error
+-- Self driving cards
+-- Robots
+-- Game AI (chess, etc..)
+
+Eg. A child learns to walk by falling -> correcting -> retrying
+
+
+
+Ten Step Machine Leaning Pipeline: 
+1. Understand the problem
+2. Collect data
+3. Clean data (pandas)
+4. Explore data (EDA)
+5. Feature Engineering
+6. Split Data
+7. Choose ML Algorithm
+8. Train the Model
+9. Evaluate the Model
+10. Deploy the Model
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
