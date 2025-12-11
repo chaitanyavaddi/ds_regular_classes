@@ -103,15 +103,115 @@ Eg. A child learns to walk by falling -> correcting -> retrying
 
 Ten Step Machine Leaning Pipeline: 
 1. Understand the problem
+-- What business probem are we solving?
+-- What are we predicting?
+Eg. predict customer churn
+
 2. Collect data
+- Could come from CSV, APIS, Databases, Sensors, Cloud storage etc.. 
+
 3. Clean data (pandas)
+- remove missign calues, fix data types, remove outliers, handle inconsistent text
+
 4. Explore data (EDA)
+- Visualizations, summary statistics, correlation etc..
+
 5. Feature Engineering
+-- Creating new meaninful features (Eg. a new column in csv)
+-- Eg. Convert data into -> date, month, weekday, holiday
+
 6. Split Data
+Eg. Imagins stduents preparing for an exam
+-- Training set (learn patterns) - all the chapters they study
+-- Test set (check performance) - the exam questions
+-- If both sets are same -> student gets 100 but leans nothing
+-- If both sets are diff -> we see real understanding
+Machine learning must also be tested on new data, not thew same data it learned from
+-- How much to spit?
+-- Most common - 80% training, 20% testing
+-- For verr large datasets - 90/10
+-- For samller ones - 70/30
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+df = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/refs/heads/master/tips.csv")
+X = df[['total_bill']] #feature
+Y = df['tip'] #label
+X_train, X_test, Y_train, Y_test =  train_test_split(X, Y, test_size=0.2, random_state=42)
+print(len(X_train), len(X_test))
+
+Remember:
+-- test set must mimic real-world unseen data
+-- Too little test data -> unreliable evaluation
+-- Never train on the test set
+-- random_sate ensures repeatability
+
 7. Choose ML Algorithm
+Def: An ML algorithm is a mathematical method the model uses to learn patterns
+
+Why we have these many algorithms? 
+You don't use a hammer to fix a laptop or a microsocpe to find a nail
+Machine learning also has different tools for different problems
+
+How to choose?
+
+Problem Type                           Algorighthm examples                            Real life examples
+Predict a number (regression)          Linear Regression, random forest regression        predict house prices
+Predict a category(classification)     Logistic regression, Decision Tree, SVM            predict if customer will churn
+Group similar items (Clustering)       KMeans                                             Customer segmenatation
+Reduce Dimentionality                  PCA                                                Compress image features
+
+
+
+-- Linear Regression
+-- Logistic regression
+-- Decision Tree
+-- Random Forest
+-- SVM
+-- KMeans
+-- PCA
+
 8. Train the Model
+-- feed training data to model.
+
 9. Evaluate the Model
+-- Accuracy
+-- Precision
+-- Recall
+-- F1 score
+-- RMSE
+-- MAE
+
+Analogy: checking how well the student wrote the exam.
+
 10. Deploy the Model
+-- Use ML in production via:
+-- backend - FastAPI, Flask etc..
+-- frontend - Streamlit
+-- Cloud to host your model
+
+
+
+Real world example:
+Scenario: Predict which customer will leave a telecom company
+Inputs (Features):
+-- Number of calls
+-- Internet usage
+-- Complaints
+-- Monthly bill
+Output (Label):
+will_leave = Yes or No
+Ml Learns:
+- High bill + low usage -> customer likely to leave
+- Many complaints -> customer at risk
+
+Company uses model to:
+-- offer discounts
+-- provider better service
+-- Reduce churn
+
+
+
 
 
 
