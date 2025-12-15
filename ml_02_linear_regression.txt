@@ -1,0 +1,110 @@
+Linear Regression:
+This is a machine learning algorithm used to predict a continuous
+numerical value by learning relationship between input features
+and the target. 
+
+Why?
+Eg.1
+- Bigger house -> higher price
+- Smaller house -> lower price
+- House price = (size * rate) + base_price (we manually give formula)
+- But here LR learns this formula from data, not from rules
+
+Eg.2
+- More experience -> more salary
+Linear regression answers "What is salary expectation for a 6 years experienced?"
+
+
+Maths behind LR:
+y = mx + c
+y -> prediction (target / label)
+x -> Input feature
+m -> slope (how much y changes when x increases)
+c -> intercept (base value when x = 0)
+
+ML terminology
+x (Feature), y (Target / Label), m (weight / Coefficient), c (Bias / intercept)
+
+When?
+- Target is continous
+- Relation is linear (roughly)
+- Dataset is small to medium (Avoid too many outliers)
+
+What?
+- Minimize prediction error
+- Find the line that makes overall error smallest
+
+Code Eg.
+Problem: Predict tip amount based on total amount
+
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+df = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/refs/heads/master/tips.csv")
+
+X = df[['total_bill']] #feature
+Y = df['tip'] #label
+
+X_train, X_test, Y_train, Y_test =  train_test_split(X, Y, test_size=0.2, random_state=42)
+
+#Train the model with linear regression
+model = LinearRegression()
+model.fit(X_train, Y_train)
+print(model.predict(X_test))
+
+#This error is measured with MAE 
+from sklearn.metrics import mean_absolute_error, r2_score
+print("MAE:", mean_absolute_error(Y_test, model.predict(X_test)))
+print("Slope:", model.coef_) # For every Rs.1 increase in bill, tip increases by Rs X
+print("Intercept:", model.intercept_) # "Base tip amount"
+
+Multiple features:
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+df = pd.read_csv("https://raw.githubusercontent.com/mwaskom/seaborn-data/refs/heads/master/tips.csv")
+
+X = df[['total_bill']] #feature
+Y = df['tip'] #label
+
+X_train, X_test, Y_train, Y_test =  train_test_split(X, Y, test_size=0.2, random_state=42)
+
+#Train the model with linear regression
+model = LinearRegression()
+model.fit(X_train, Y_train)
+print(model.predict(X_test))
+
+#This error is measured with MAE 
+from sklearn.metrics import mean_absolute_error, r2_score
+print("MAE:", mean_absolute_error(Y_test, model.predict(X_test)))
+print("Slope:", model.coef_) # For every Rs.1 increase in bill, tip increases by Rs X
+print("Intercept:", model.intercept_) # "Base tip amount"
+
+#formula = m1x1 + m2x2 + c
+
+
+#usecases
+- Real Estate - House price prediction
+- HR - Salary estimation
+- Sales - Revenue forecast
+- Finance - Risk scoring
+- Marketing - Ad spend vs sales
+- Manufacturing - Cost estimation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
