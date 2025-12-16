@@ -1,0 +1,70 @@
+Def: Logistic Regression
+This is a supervised machine learning algorithm used to 
+predict a categorical outcome (usually Yes / No) by estimating probabilties. 
+
+- It predicts the probability of something happening, and then 
+converts that probability into a class
+
+Why?
+Eg. 1: Loan Approval
+Input:
+- Income, Credit score, Age, existing loans
+Output:
+- Loan Approved? yes or no
+
+Logistic Regression answers 
+- what is the probability that this person will replay the loan?
+
+Eg.2: Disease prediction
+Inputs: Age, BP, Sugar Level 
+Output: Disease present? yes or No
+
+Eg 3: Spam detection 
+
+
+What?
+It outputs probability btw 0 and 1
+
+Example:
+- 0.93 -> very likely 'yes'
+- 0.12 -> very likely 'no'
+
+
+How?
+z = w1x1 + w2x2 + b
+probability = sigmoid(z) 
+The function maps any real-valued input \(x\) to an output value 
+between 0 and 1 (exclusive). 
+This makes it suitable for binary classification 
+problems and modeling probabilities.
+
+
+terminology:
+weights - Importance of features
+Bias - base tedency
+Sigmoid - Probability converter
+Threshold - Decision boundary
+
+
+When?
+- Binary classification (yes / No)
+- Probablistics output needed
+- Small - medium datasets
+
+
+What?
+It learns a decision boudnary
+- The boundary seperates 
+- class 0
+- class 1
+
+
+
+
+
+
+
+
+
+
+
